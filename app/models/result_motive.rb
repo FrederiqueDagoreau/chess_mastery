@@ -1,0 +1,2 @@
+class ResultMotive < ApplicationRecord
+end

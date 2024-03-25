@@ -1,0 +1,2 @@
+module ResultMotivesHelper
+end

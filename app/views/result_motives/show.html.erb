@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @result_motive %>
+
+<div>
+  <%= link_to "Edit this result motive", edit_result_motive_path(@result_motive) %> |
+  <%= link_to "Back to result motives", result_motives_path %>
+
+  <%= button_to "Destroy this result motive", @result_motive, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Result motives</h1>
+
+<div id="result_motives">
+  <% @result_motives.each do |result_motive| %>
+    <%= render result_motive %>
+    <p>
+      <%= link_to "Show this result motive", result_motive %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New result motive", new_result_motive_path %>
