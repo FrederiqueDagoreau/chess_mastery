@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_25_201144) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_26_203351) do
+  create_table "game_result_motives", force: :cascade do |t|
+    t.integer "game_id", null: false
+    t.integer "result_motive_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_result_motives_on_game_id"
+    t.index ["result_motive_id"], name: "index_game_result_motives_on_result_motive_id"
+  end
+
   create_table "games", force: :cascade do |t|
     t.string "url"
     t.float "score"
@@ -25,4 +34,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_25_201144) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "game_result_motives", "games"
+  add_foreign_key "game_result_motives", "result_motives"
 end
